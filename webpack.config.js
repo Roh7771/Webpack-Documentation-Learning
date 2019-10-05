@@ -6,18 +6,19 @@ module.exports = {
   mode: 'development',
   entry: {
     app: './src/index.js',
-    print: './src/print.js',
   },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
+    writeToDisk: true,
+    hot: true,
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       inject: false,
       template: require('html-webpack-template'),
-      title: 'Output Management',
+      title: 'Output Management!',
       mobile: true,
       lang: 'en-US',
     }),

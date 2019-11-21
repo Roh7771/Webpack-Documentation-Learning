@@ -30,7 +30,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       template: require('html-webpack-template'),
-      title: 'Output Management',
+      title: 'Output Management!',
       mobile: true,
       lang: 'en-US',
       appMountId: 'root'

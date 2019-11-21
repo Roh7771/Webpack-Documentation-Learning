@@ -1,18 +1,12 @@
-import _ from 'lodash';
-import printMe from './print.js';
+import '../styles/main.sass';
 
-function component() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
-  
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-    element.appendChild(btn);
-    
-    return element;
+const App = () => {
+    return (
+        <h1>Hello World!!!</h1>
+    )
 }
-  
-document.body.appendChild(component());
+
+ReactDOM.render(<App/>, document.getElementById('root'))

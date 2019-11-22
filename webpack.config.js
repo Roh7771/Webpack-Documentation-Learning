@@ -6,12 +6,12 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
-  // devtool: 'inline-source-map',
+  mode: 'development',
+  devtool: 'inline-source-map',
 
-  optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
-  },
+  // optimization: {
+  //   minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+  // },
 
   entry: {
     app: './src/index.js',
